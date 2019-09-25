@@ -26,9 +26,9 @@ namespace ServMart.Controllers
                 CurrentPage = productPage,
                 ItemsPerPage = PageSize,
                 TotalItems = category == null ?
-                repository.Products.Count() :
-                repository.Products.Where(e =>
-                e.Category == category).Count()
+                    repository.Products.Count() :
+                    repository.Products.Where(e =>
+                        e.Category == category).Count()
             },
             CurrentCategory = category
         });
